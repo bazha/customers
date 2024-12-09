@@ -2,7 +2,6 @@ import { DataSource } from 'typeorm';
 import { ConfigService } from '@nestjs/config';
 import { Customer } from './entities/customer.entities';
 
-
 export const databaseProviders = [
   {
     provide: 'DATABASE_CONNECTION',
@@ -14,7 +13,7 @@ export const databaseProviders = [
         username: configService.get<string>('DB_USER'),
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_NAME'),
-        entities: [__dirname + './entities/*.entity{.ts,.js}'],
+        entities: [Customer],
         migrations: [__dirname + './migrations/*.ts'],
         synchronize: false,
         logging: true,
