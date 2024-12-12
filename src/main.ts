@@ -1,7 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
-import { CustomersModule } from './customers.module';
 import { Logger } from '@nestjs/common';
+
+import { CustomersModule } from './customers.module';
 import { join } from 'path';
 
 async function bootstrap() {
