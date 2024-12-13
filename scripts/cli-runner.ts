@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
 
-import { Customer } from '../src/database/entities/customer.entities';
+import { Customer } from '../src/customers/entities/customer.entities';
 dotenv.config();
 
 const AppDataSource = new DataSource({

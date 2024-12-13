@@ -1,5 +1,5 @@
 import { DataSource } from 'typeorm';
-import { Customer } from '../entities/customer.entities';
+import { Customer } from '../../customers/entities/customer.entities';
 
 class CustomersSeed {
   private datasource: DataSource;

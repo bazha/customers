@@ -2,12 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
 import { Logger } from '@nestjs/common';
 
-import { CustomersModule } from './customers.module';
+import { AppModule } from './app.module';
 import { join } from 'path';
 
 async function bootstrap() {
   const logger = new Logger('bootstrap');
-  const app = await NestFactory.create(CustomersModule);
+  const app = await NestFactory.create(AppModule);
 
   app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.RMQ,

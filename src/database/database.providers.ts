@@ -1,9 +1,9 @@
 import { DataSource } from 'typeorm';
-import { Customer } from './entities/customer.entities';
+import { Customer } from '../customers/entities/customer.entities';
 
 export const databaseProviders = [
   {
-    provide: 'DATABASE_CONNECTION',
+    provide: 'DATABASE_SOURCE',
     useFactory: async () => {
       const dataSource = new DataSource({
         type: 'postgres',
