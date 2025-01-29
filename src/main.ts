@@ -25,7 +25,7 @@ async function bootstrap() {
     options: {
       package: 'customers',
       protoPath: join(__dirname, '../../src/protos/customers.proto'),
-      url: 'customers:3003',
+      url: '0.0.0.0:3003',
     },
   });
 
